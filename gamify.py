@@ -639,51 +639,51 @@ markup = '''
 </head>
 
 <body class="section-projects">
-<main class="layout-stacked">
-    <div class="layout-stacked__header header">
-        <header class="project__header">
-            <div class="layout-container">
-                <div class="snyk-img" style="
-                        display: block;
-                        margin-left: auto;
-                        margin-right: auto;
-                        width: 50%;
-                    ">
-                        <img src="https://res.cloudinary.com/snyk/image/upload/v1537345894/press-kit/brand/logo-black.png">
-                </div>
-                <div class="header-wrap">
+    <main class="layout-stacked">
+        <div class="layout-stacked__header header">
+            <header class="project__header">
+                <div class="layout-container">
+                    <div class="snyk-img" style="
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 50%;
+                        ">
+                            <img src="https://res.cloudinary.com/snyk/image/upload/v1537345894/press-kit/brand/logo-black.png">
+                    </div>
+                    <div class="header-wrap">
 
-                    <h1 class="project__header__title">Snyk Vulnerability Scoreboard</h1>
+                        <h1 class="project__header__title">Snyk Vulnerability Scoreboard</h1>
 
-                    <p class="timestamp"> Date: '''+ now.strftime("%m/%d/%Y") +'''</p>
-                </div>
-                <div class="source-panel">
-                    <span>Scanned the following local git project:</span>
-                    <ul>
-                        <li class="paths">'''+ os.getcwd() +'''</li>
+                        <p class="timestamp"> Date: '''+ now.strftime("%m/%d/%Y") +'''</p>
+                    </div>
+                    <div class="source-panel">
+                        <span>Scanned the following local git project:</span>
+                        <ul>
+                            <li class="paths">'''+ os.getcwd() +'''</li>
 
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
 
-                <div class="meta-counts">
+                    <div class="meta-counts">
 
-                    <div class="meta-count"> <span>The team has fixed <span>'''+ str(vulns_fixed) +'''</span> vulnerabilities since</span> <span>'''+ startdate.strftime("%m/%d/%Y") +'''</span></div>
-                </div><!-- .meta-counts -->
-            </div><!-- .layout-container--short -->
-        </header><!-- .project__header -->
-    </div><!-- .layout-stacked__header -->
-    <section class="layout-container">
-        <table class="metatable">
-            <tbody>
+                        <div class="meta-count"> <span>The team has fixed <span>'''+ str(vulns_fixed) +'''</span> vulnerabilities since</span> <span>'''+ startdate.strftime("%m/%d/%Y") +'''</span></div>
+                    </div><!-- .meta-counts -->
+                </div><!-- .layout-container--short -->
+            </header><!-- .project__header -->
+        </div><!-- .layout-stacked__header -->
+        <section class="layout-container">
+            <table class="metatable">
+                <tbody>
 
-            ''' + dev_markup + '''
-            </tbody>
-           </table>
-       </section>
-     </main><!-- .layout-stacked__content -->
-    </body>
+                ''' + dev_markup + '''
+                </tbody>
+            </table>
+        </section>
+    </main><!-- .layout-stacked__content -->
+</body>
 
-     </html>
+</html>
 '''
 
 markup_file = open(projDir + '/leaderboard.html', 'w')
