@@ -29,6 +29,7 @@ if len(sys.argv) != 2:
     exit(1)
 
 print(str(sys.argv[1]))
+starting_dir = os.getcwd()
 projDir = sys.argv[1]
 os.chdir(projDir)
 print('so far, so good!')
@@ -686,7 +687,7 @@ markup = '''
 </html>
 '''
 
-markup_file = open(projDir + '/leaderboard.html', 'w')
+markup_file = open(starting_dir + '/leaderboard.html', 'w')
 markup_file.write(markup)
 markup_file.close()
 
